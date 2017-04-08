@@ -1,0 +1,5 @@
+ifconfig eth0 10.8.1.1 netmask 255.255.255.0 broadcast 10.8.1.255 up
+ifconfig eth1 10.8.2.1 netmask 255.255.255.252 broadcast 10.8.2.3 up
+route add -net 10.8.3.0 netmask 255.255.255.252 gw 10.8.2.2 dev eth1
+route add -net 10.8.5.0 netmask 255.255.255.252 gw 10.8.2.2 dev eth1
+route add default gw 10.8.2.2
